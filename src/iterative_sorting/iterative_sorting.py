@@ -31,7 +31,7 @@ def bubble_sort(arr):
             # compare current value with next value
             if arr[j] > arr[j+1]:
 
-                # swap current value and next value
+                # if current value > next value, swap values
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr
