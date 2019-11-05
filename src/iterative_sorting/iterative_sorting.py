@@ -16,18 +16,23 @@ def selection_sort(arr):
                 smallest_index = j
 
         # Swap current index and smallest index
-        temp = arr[cur_index]
-        arr[cur_index] = arr[smallest_index]
-        arr[smallest_index] = temp
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
 
     return arr
 
 
-print(selection_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7]))
-
-
-# TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
+    # loop through n-1 elements
+    for i in range(0, len(arr) - 1):
+
+        # loop through n-1-n elements
+        for j in range(len(arr) - 1):
+
+            # compare current value with next value
+            if arr[j] > arr[j+1]:
+
+                # swap current value and next value
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr
 
@@ -36,3 +41,8 @@ def bubble_sort(arr):
 def count_sort(arr, maximum=-1):
 
     return arr
+
+
+# Complex sorting algo
+
+# 200
